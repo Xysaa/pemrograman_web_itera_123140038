@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manajemen Tugas Mahasiswa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Manajemen Tugas Mahasiswa</h1>
+      <p class="subtitle">PRAKTIKUM PEMROGRAMAN WEB PERTEMUAN 1</p>
+    </header>
+
+    <main class="container">
+      <!-- Form Tugas -->
+      <section class="card" aria-labelledby="form-title">
+        <div class="card-header">
+          <h2 id="form-title">Tambah / Edit Tugas</h2>
+          <span id="incompleteCount" class="chip" aria-live="polite">0 belum selesai</span>
+        </div>
+        <form id="taskForm" novalidate>
+        <input type="hidden" id="taskId" />
+        <div class="grid">
+            <div class="field">
+            <label for="name">Nama Tugas <span class="req">*</span></label>
+            <input id="name" name="name" type="text" placeholder="Contoh: Tugas Bab 3" required />
+            <small class="error" id="err-name"></small>
+            </div>
+
+            <div class="field">
+            <label for="course">Mata Kuliah <span class="req">*</span></label>
+            <input id="course" name="course" type="text" placeholder="Contoh: Struktur Data" required />
+            <small class="error" id="err-course"></small>
+            </div>
+
+            <div class="field">
+            <label for="deadline">Deadline <span class="req">*</span></label>
+            <input id="deadline" name="deadline" type="date" required />
+            <small class="error" id="err-deadline"></small>
+            </div>
+
+            <div class="field">
+            <label for="statusSelect">Status</label>
+            <select id="statusSelect">
+                <option value="false">Belum selesai</option>
+                <option value="true">Selesai</option>
+            </select>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn primary">Tambah Tugas</button>
+            <button type="button" id="cancelEditBtn" class="btn ghost" hidden>Batalkan Edit</button>
+        </div>
+        </form>
+
+      </section>
+
+      <!-- Filter & Pencarian -->
+      <section class="card" aria-labelledby="filter-title">
+        <div class="card-header">
+          <h2 id="filter-title">Filter & Pencarian</h2>
+        </div>
+        <div class="grid grid-4">
+          <div class="field">
+            <label for="statusFilter">Status</label>
+            <select id="statusFilter">
+              <option value="all">Semua</option>
+              <option value="pending">Belum selesai</option>
+              <option value="completed">Selesai</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="courseFilter">Mata Kuliah</label>
+            <select id="courseFilter">
+              <option value="all">Semua</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="searchInput">Cari (nama/matkul)</label>
+            <input id="searchInput" type="search" placeholder="Ketik untuk mencari…" />
+          </div>
+          <div class="field">
+            <label for="sortSelect">Urutkan</label>
+            <select id="sortSelect">
+              <option value="deadlineAsc">Deadline terdekat</option>
+              <option value="deadlineDesc">Deadline terjauh</option>
+              <option value="createdDesc">Terbaru dibuat</option>
+              <option value="createdAsc">Terlama dibuat</option>
+              <option value="nameAsc">Nama (A→Z)</option>
+              <option value="nameDesc">Nama (Z→A)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Daftar Tugas -->
+      <section class="card" aria-labelledby="list-title">
+        <div class="card-header">
+          <h2 id="list-title">Daftar Tugas</h2>
+        </div>
+        <div id="emptyState" class="empty" hidden>
+          <p>Belum ada tugas. Mulai dengan menambahkan tugas pada form di atas</p>
+        </div>
+        <ul id="taskList" class="task-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>STEVANUS CAHYA ANGGARA - 123140038</p>
+    </footer>
+
+    <template id="taskItemTemplate">
+      <li class="task-item">
+        <div class="left">
+          <input type="checkbox" class="toggle" />
+          <div class="meta">
+            <p class="name"></p>
+            <p class="sub"><span class="course"></span> • <span class="deadline"></span></p>
+          </div>
+        </div>
+        <div class="right">
+          <span class="chip status"></span>
+          <button class="btn icon edit" title="Edit" aria-label="Edit tugas">EDIT</button>
+          <button class="btn icon danger delete" title="Hapus" aria-label="Hapus tugas">HAPUS</button>
+        </div>
+      </li>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
