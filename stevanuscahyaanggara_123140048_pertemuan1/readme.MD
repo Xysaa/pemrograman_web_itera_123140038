@@ -23,9 +23,9 @@ Seluruh data disimpan secara **lokal di browser** menggunakan `localStorage`, se
 
 | Tampilan | Deskripsi |
 |-----------|------------|
-| ![Screenshot 1](assets/screenshots/tambah-tugas.png) | Form tambah tugas dengan validasi input |
-| ![Screenshot 2](assets/screenshots/daftar-tugas.png) | Daftar tugas dengan status dan filter |
-| ![Screenshot 3](assets/screenshots/edit-tugas.png) | Form edit tugas dan ubah status selesai/belum |
+| ![Screenshot 1](https://github.com/user-attachments/assets/1996bacf-0bfc-4db0-a50a-899ecd1e641d) | Form tambah tugas dengan validasi input |
+| ![Screenshot 2](https://github.com/user-attachments/assets/44732057-3deb-4a2b-a391-311f042ee8e3) | Daftar tugas dengan status dan filter |
+| ![Screenshot 3](https://github.com/user-attachments/assets/c5bc550f-57ab-43f2-9186-e6d49d976a69) | Form edit tugas dan ubah status selesai/belum |
 
 ---
 
