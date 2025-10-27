@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Dashboard — Watchlist</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container">
+      <h1 class="title">Watchlist Dashboard</h1>
+      <p class="subtitle">Kelola daftar tonton: anime, film, series, manga/manhwa</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Form -->
+    <section class="card">
+      <h2 class="section-title">Tambah Item</h2>
+      <form id="watch-form" autocomplete="off">
+        <div class="grid">
+          <div class="field">
+            <label for="title">Judul <span>*</span></label>
+            <input id="title" name="title" type="text" placeholder="Contoh: Sousou no Frieren" required />
+          </div>
+
+          <div class="field">
+            <label for="category">Kategori <span>*</span></label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Pilih kategori</option>
+              <option value="Anime">Anime</option>
+              <option value="Film">Film Movie</option>
+              <option value="Series">Series Film</option>
+              <option value="Manga/Manhwa">Manga/Manhwa</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="priority">Prioritas <span>*</span></label>
+            <select id="priority" name="priority" required>
+              <option value="" disabled selected>Pilih prioritas</option>
+              <option value="Tinggi">Tinggi</option>
+              <option value="Sedang">Sedang</option>
+              <option value="Rendah">Rendah</option>
+            </select>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn primary">Tambah</button>
+            <button type="reset" class="btn ghost" id="btn-reset">Reset</button>
+          </div>
+        </div>
+      </form>
+      <p class="hint">Edit hanya untuk mengganti status <em>Belum</em> → <em>Selesai</em>.</p>
+    </section>
+
+    <!-- List -->
+    <section class="card">
+      <div class="list-header">
+        <div class="left">
+          <input type="search" id="search" placeholder="Cari judul…" />
+        </div>
+        <div id="stats" class="stats">0 item • 0 selesai</div>
+      </div>
+
+      <ul id="watch-list" class="watch-list" aria-live="polite"></ul>
+      <div id="empty" class="empty hidden">Belum ada data. Tambahkan item pertama kamu.</div>
+
+      <div class="list-footer">
+        <button class="btn danger" id="clear-finished">Hapus yang Selesai</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <small>Data tersimpan di perangkat ini menggunakan <code>localStorage</code>.</small>
+    </div>
+  </footer>
+
+  <template id="item-template">
+    <li class="watch-item">
+      <div class="info">
+        <div class="row-1">
+          <span class="badge category"></span>
+          <span class="title"></span>
+        </div>
+        <div class="row-2">
+          <span class="badge priority"></span>
+          <span class="status"></span>
+          <span class="meta"></span>
+        </div>
+      </div>
+      <div class="item-actions">
+        <button class="btn small toggle">Tandai Selesai</button>
+        <button class="btn small danger remove">Hapus</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
