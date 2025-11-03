@@ -2,7 +2,6 @@
 
 Aplikasi web modern untuk mengelola koleksi buku pribadi dengan fitur lengkap untuk mencatat, mengatur, dan melacak buku-buku yang dimiliki, sedang dibaca, atau ingin dibeli.
 
-## 🎨 Screenshot Antarmuka
 
 ## ✨ Fitur Utama
 
@@ -77,6 +76,7 @@ http://localhost:5173
 ```
 
 
+## 🎨 Screenshot Antarmuka
 ### Halaman Koleksi Buku
 ![Halaman Home](https://github.com/user-attachments/assets/21aaf557-28ec-488c-b7ee-1c571cc18bd3)
 
