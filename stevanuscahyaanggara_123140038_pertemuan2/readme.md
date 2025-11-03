@@ -28,9 +28,9 @@ Aplikasi ini bertunjuan untuk membantu pengguna mencatat, mengelompokkan, dan me
 
 | Tampilan | Deskripsi |
 |----------|-----------|
-| ![Form Tambah](./screenshots/form.png) | Form untuk menambahkan judul dengan kategori dan prioritas |
-| ![Daftar Watchlist](./screenshots/list.png) | Tampilan daftar dengan badge kategori & prioritas |
-| ![Status Selesai](./screenshots/done.png) | Item selesai otomatis berada di bagian bawah |
+| ![Form Tambah](https://github.com/user-attachments/assets/ffda66af-aa4f-444c-a4c3-0936075a445e) | Form untuk menambahkan judul dengan kategori dan prioritas |
+| ![Daftar Watchlist](https://github.com/user-attachments/assets/4bb463a8-0dde-4159-b7c2-adbf60dfcbd3) | Tampilan daftar dengan badge kategori & prioritas |
+| ![Status Selesai](https://github.com/user-attachments/assets/f3a48949-a076-41f5-acd3-c9ebfcf8a526) | Item selesai otomatis berada di bagian bawah |
 
 ---
 
