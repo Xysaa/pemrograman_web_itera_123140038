@@ -18,6 +18,7 @@ Program ini dibuat untuk mengelola data nilai mahasiswa menggunakan bahasa Pytho
 - Nilai Akhir dihitung dengan rumus:
 30% UTS + 40% UAS + 30% Tugas
 - Penentuan Grade:
+
 | Nilai | Grade |
 |--------|--------|
 | ≥ 80   | A |
